@@ -1,0 +1,94 @@
+:root {
+  --background-body: #d9dad7;
+  --color-box: rgb(0, 162, 255);
+  /*input value for conversion 1v1*/
+  --inputW1: 12rem;
+  --inputH1: 2.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-body);
+}
+
+#titleBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  background-color: var(--color-box);
+  border: 0.25rem solid black;
+  width: auto;
+  height: 6.5rem;
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+}
+
+#lowerBox {
+  margin: auto;
+  background-color: var(--color-box);
+  border: 0.25rem solid black;
+  width: auto;
+}
+
+.menu {
+  text-align: center;
+  padding: 0.25rem;
+}
+
+#table-conv {
+  width: 25rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+}
+
+.input1box {
+  grid-area: input1Box;
+  text-align: end;
+  place-self: stretch;
+}
+
+#input1, #input2, #input1-conv, #input2-conv {
+  width: var(--inputW1);
+  height: var(--inputH1);
+  font-size: 2rem;
+}
+
+.equal_sign {
+  grid-area: equal;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem;
+  height: auto;
+  width: 25px;
+  position: relative;
+  top: -5px;
+}
+
+.input2box {
+  grid-area: input2Box;
+  text-align: start;
+  place-self: stretch;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto var(--inputW1) 25px var(--inputW1) auto;  
+  grid-auto-rows: minmax(200px, auto);
+  grid-template-areas: ". input1Box equal input2Box .";
+}
+
+
+
+@media only screen and (max-width: 640px) {
+  #titleBox {
+    font-size: 12.5vw;
+  }
+  #table-conv {
+    width: 62.5vw;
+    font-size: 3.75vw;
+  }
+}
