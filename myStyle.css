@@ -74,12 +74,7 @@ body {
   place-self: stretch;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: auto var(--inputW1) 25px var(--inputW1) auto;  
-  grid-auto-rows: minmax(200px, auto);
-  grid-template-areas: ". input1Box equal input2Box .";
-}
+
 
 
 

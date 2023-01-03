@@ -1,4 +1,11 @@
 const table = {
+    "" : {
+        "conversion" : {
+            "input" : 0,
+            "output" : 0,
+            "alternating" : false
+        }
+    },
     "Length" : {
         "Kilometer": 0.001,
         "Meter": 1,
